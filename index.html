@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastCashNow - Get Up to $5,000 Today!</title>
+    <meta name="description" content="Need cash fast? Apply for a payday loan up to $5,000 with quick approval. No credit check required for qualified applicants.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Enhanced Base Styles */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --secondary-dark: #0da271;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --success: #10b981;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 18px;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-dark);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Enhanced Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 5px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        /* Enhanced Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>') no-repeat;
+            background-size: cover;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .hero-cta {
+            flex: 0 0 400px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            color: var(--dark);
+            text-align: center;
+        }
+        
+        .cta-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .hero-badges {
+            display: flex;
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255,255,255,0.1);
+            padding: 10px 15px;
+            border-radius: 50px;
+        }
+        
+        .badge i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        /* Enhanced Features Section */
+        .features {
+            background-color: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+        
+        .section-header h2 {
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            color: var(--gray);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--gray-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .feature-icon i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        /* Enhanced How It Works Section */
+        .how-it-works {
+            background-color: var(--light);
+            position: relative;
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--gray-light);
+            z-index: 1;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            padding: 0 15px;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Enhanced Testimonials */
+        .testimonials {
+            background-color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--gray-light);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--gray-light);
+            margin-right: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        
+        /* Enhanced FAQ Section */
+        .faq {
+            background-color: var(--light);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background-color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* Enhanced CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>') no-repeat;
+            background-size: cover;
+        }
+        
+        .cta h2 {
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Enhanced Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        .disclaimer {
+            background-color: #fef2f2;
+            border-left: 4px solid var(--danger);
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 4px;
+            color: var(--dark);
+        }
+        
+        /* Enhanced Loan Amount Selector */
+        .loan-amount-selector {
+            margin: 30px 0;
+        }
+        
+        .amount-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .amount-option {
+            flex: 1;
+            margin: 0 5px;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid var(--gray-light);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .amount-option:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .amount-option.selected {
+            border-color: var(--secondary);
+            background-color: rgba(16, 185, 129, 0.1);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .amount-option h3 {
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .amount-option p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: var(--gray);
+        }
+        
+        /* Security Badges */
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255,255,255,0.1);
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+        
+        .security-badge i {
+            color: var(--success);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            display: none;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary);
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: var(--shadow);
+        }
+        
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-to-top:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        /* Trust Indicators */
+        .trust-indicators {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .trust-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .trust-item i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .trust-item .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .trust-item .label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        /* Enhanced Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            
+            .hero-cta {
+                width: 100%;
+                max-width: 500px;
+            }
+            
+            .steps {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .steps::before {
+                display: none;
+            }
+            
+            .amount-options {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .amount-option {
+                flex: 0 0 calc(50% - 10px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                z-index: 100;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .amount-option {
+                flex: 0 0 100%;
+            }
+            
+            .trust-indicators {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Enhanced Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        /* Enhanced Countdown Timer */
+        .countdown-timer {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .countdown-text {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .countdown-numbers {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .countdown-unit {
+            background-color: white;
+            color: var(--dark);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            min-width: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .urgency-badge {
+            display: inline-block;
+            background-color: var(--warning);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        /* Progress Bar */
+        .progress-bar {
+            height: 5px;
+            background-color: var(--gray-light);
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><i class="fas fa-money-bill-wave"></i>Fast<span>Cash</span>Now</div>
+                <nav>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#features">Benefits</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#" class="btn">Apply Now</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-text">
+                    <h1>Get Up To $5,000 In Your Account As Soon As Today!</h1>
+                    <p>Fast, easy, and secure online payday loans when you need them most. No lengthy paperwork, no hidden fees.</p>
+                    <div class="hero-badges">
+                        <div class="badge">
+                            <i class="fas fa-bolt"></i>
+                            <span>Decision in Minutes</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-lock"></i>
+                            <span>No Upfront Fees</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Safe & Secure</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <i class="fas fa-users"></i>
+                            <div class="number">50,000+</div>
+                            <div class="label">Happy Customers</div>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="number">24/7</div>
+                            <div class="label">Service Available</div>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <div class="number">$100M+</div>
+                            <div class="label">Loans Processed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <div class="cta-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Get Your Cash Now</h3>
+                    <p>Select your desired loan amount:</p>
+                    
+                    <div class="loan-amount-selector">
+                        <div class="amount-options">
+                            <div class="amount-option" data-amount="500">
+                                <h3>$500</h3>
+                                <p>Short-term solution</p>
+                            </div>
+                            <div class="amount-option" data-amount="1000">
+                                <h3>$1,000</h3>
+                                <p>Most popular</p>
+                            </div>
+                            <div class="amount-option" data-amount="2500">
+                                <h3>$2,500</h3>
+                                <p>Extended needs</p>
+                            </div>
+                            <div class="amount-option" data-amount="5000">
+                                <h3>$5,000</h3>
+                                <p>Maximum amount</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-bar">
+                        <div class="progress" id="application-progress"></div>
+                    </div>
+                    <p class="form-note"><span id="applicants-today">127</span> people applied today</p>
+                    
+                    <div class="urgency-badge">
+                        <i class="fas fa-clock"></i> Limited Time Offer
+                    </div>
+                    
+                    <div class="countdown-timer">
+                        <div class="countdown-text">Offer expires in:</div>
+                        <div class="countdown-numbers">
+                            <div class="countdown-unit" id="countdown-hours">02</div>:
+                            <div class="countdown-unit" id="countdown-minutes">30</div>:
+                            <div class="countdown-unit" id="countdown-seconds">00</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-large btn-secondary" id="cta-button" style="width: 100%;">Get My Cash Now</a>
+                    <p class="form-note">By clicking, you agree to our Terms and Privacy Policy.</p>
+                    
+                    <div class="security-badges">
+                        <div class="security-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>256-bit SSL Secure</span>
+                        </div>
+                        <div class="security-badge">
+                            <i class="fas fa-lock"></i>
+                            <span>Your Data is Safe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose FastCashNow?</h2>
+                <p>We make getting a payday loan simple, fast, and secure</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Approval</h3>
+                    <p>Get a decision in minutes, not days. Funds can be deposited into your account as soon as the same day.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>Your information is protected with bank-level encryption. We never sell your data to third parties.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>All Credit Types</h3>
+                    <p>We consider applications from all credit backgrounds. Your current financial situation is what matters most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Getting your cash is simple with our 3-step process</p>
+            </div>
+            <div class="steps">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Apply Online</h3>
+                    <p>Fill out our simple application form. It takes just 5 minutes and won't affect your credit score.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Get Approved</h3>
+                    <p>Receive an instant decision. If approved, review and sign your loan agreement electronically.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Receive Funds</h3>
+                    <p>Get your money deposited directly into your bank account, often on the same day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-text">
+                        "I was in a tight spot with an unexpected car repair. FastCashNow got me the money I needed the same day. The process was so easy!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah J.</h4>
+                            <p>Chicago, IL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-text">
+                        "As someone with less-than-perfect credit, I was surprised when I got approved. The rates were fair and the customer service was excellent."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael T.</h4>
+                            <p>Houston, TX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-text">
+                        "I've used other services before, but FastCashNow was by far the fastest. From application to funding was less than 4 hours. Highly recommend!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Jessica L.</h4>
+                            <p>Miami, FL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about our payday loans</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">What are the requirements to qualify for a loan?</div>
+                    <div class="faq-answer">
+                        <p>To qualify, you must be at least 18 years old, a U.S. citizen or permanent resident, have a steady source of income, and an active checking account.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How quickly can I get the money?</div>
+                    <div class="faq-answer">
+                        <p>If approved, funds are typically deposited into your account within one business day. In some cases, same-day funding may be available.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Will you check my credit score?</div>
+                    <div class="faq-answer">
+                        <p>We may perform a soft credit check which won't affect your credit score. We focus more on your current ability to repay the loan.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What if I have bad credit?</div>
+                    <div class="faq-answer">
+                        <p>We consider applications from all credit backgrounds. A less-than-perfect credit score doesn't automatically disqualify you.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Are there any fees to apply?</div>
+                    <div class="faq-answer">
+                        <p>No, there are absolutely no fees to apply for a loan. You only pay interest and fees if you accept and receive a loan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Get the Cash You Need?</h2>
+            <p>Join thousands of satisfied customers who have trusted FastCashNow for their financial needs.</p>
+            <a href="#" class="btn btn-large" id="bottom-cta">Apply Now - It's Free!</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FastCashNow</h3>
+                    <p>Providing fast, secure financial solutions when you need them most.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#features">Benefits</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">CCPA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li>Email: support@fastcashnow.com</li>
+                        <li>Phone: (888) 123-4567</li>
+                        <li>Hours: Mon-Fri 8am-8pm EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> FastCashNow is not a lender but connects consumers with lenders who may provide loan offers. Loan amounts, terms, and availability vary by state and lender. Not all applicants will qualify for the maximum loan amount. The time it takes to receive funds may vary depending on your bank. This service may not be available in all states.</p>
+                <p>APR Disclosure: The actual APR you receive depends on the lender you are connected with, your creditworthiness, state laws, and other factors. APRs can range from 5.99% to 35.99%. Loan terms typically range from 3 to 36 months.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FastCashNow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Modal -->
+    <div class="modal" id="application-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="cta-icon">
+                <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h3>Almost There!</h3>
+            <p>You're applying for <strong id="modal-amount">$1,000</strong></p>
+            
+            <form id="application-form">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" class="form-input" id="email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="zipcode">ZIP Code</label>
+                    <input type="text" class="form-input" id="zipcode" placeholder="12345" pattern="[0-9]{5}" required>
+                </div>
+                <button type="submit" class="btn btn-large btn-secondary" style="width: 100%;">Continue to Secure Application</button>
+            </form>
+            
+            <div class="spinner" id="form-spinner"></div>
+            
+            <div class="security-badges" style="margin-top: 20px;">
+                <div class="security-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>256-bit SSL Secure</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav ul').classList.remove('show');
+            });
+        });
+
+        // Enhanced FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Enhanced Loan Amount Selection
+        let selectedAmount = 1000; // Default amount
+        
+        document.querySelectorAll('.amount-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove selected class from all options
+                document.querySelectorAll('.amount-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                
+                // Update selected amount
+                selectedAmount = this.getAttribute('data-amount');
+                
+                // Update CTA button text
+                document.getElementById('cta-button').textContent = `Get $${selectedAmount} Now`;
+                
+                // Update progress bar based on amount selected
+                updateProgressBar();
+            });
+        });
+
+        // Set default selection
+        document.querySelector('.amount-option[data-amount="1000"]').classList.add('selected');
+
+        // Progress Bar Animation
+        function updateProgressBar() {
+            const progressBar = document.getElementById('application-progress');
+            let width = 0;
+            
+            // Higher amounts show more progress (psychological trigger)
+            switch(selectedAmount) {
+                case '500': width = 25; break;
+                case '1000': width = 50; break;
+                case '2500': width = 75; break;
+                case '5000': width = 100; break;
+            }
+            
+            progressBar.style.width = `${width}%`;
+        }
+
+        // Initialize progress bar
+        updateProgressBar();
+
+        // Enhanced Countdown Timer
+        function startCountdown() {
+            let hours = 2;
+            let minutes = 30;
+            let seconds = 0;
+            
+            const countdown = setInterval(function() {
+                // Display the countdown
+                document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                // Decrement the time
+                if (seconds > 0) {
+                    seconds--;
+                } else {
+                    if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                    } else {
+                        if (hours > 0) {
+                            hours--;
+                            minutes = 59;
+                            seconds = 59;
+                        } else {
+                            // Countdown finished
+                            clearInterval(countdown);
+                            document.querySelector('.countdown-timer').innerHTML = '<div class="countdown-text" style="color: var(--danger); font-weight: bold;">Offer expired!</div>';
+                            document.getElementById('cta-button').style.backgroundColor = 'var(--gray)';
+                            document.getElementById('cta-button').style.cursor = 'not-allowed';
+                            document.getElementById('cta-button').removeEventListener('click', redirectToOffer);
+                        }
+                    }
+                }
+            }, 1000);
+        }
+
+        // Applicants Counter (simulated)
+        function updateApplicantsCounter() {
+            const counter = document.getElementById('applicants-today');
+            let count = parseInt(counter.textContent);
+            
+            // Increment counter every 30 seconds to simulate real-time applications
+            setInterval(() => {
+                count += Math.floor(Math.random() * 3) + 1; // Random increment between 1-3
+                counter.textContent = count;
+            }, 30000);
+        }
+
+        // Modal Functions
+        function openModal() {
+            document.getElementById('application-modal').style.display = 'flex';
+            document.getElementById('modal-amount').textContent = `$${selectedAmount}`;
+        }
+
+        function closeModal() {
+            document.getElementById('application-modal').style.display = 'none';
+            document.getElementById('form-spinner').style.display = 'none';
+        }
+
+        // Close modal when clicking outside content
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('application-modal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Redirect to affiliate offer
+        function redirectToOffer() {
+            openModal();
+            return false; // Prevent default link behavior
+        }
+
+        // Form submission handler
+        document.getElementById('application-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading spinner
+            document.getElementById('form-spinner').style.display = 'block';
+            
+            // Simulate form processing
+            setTimeout(() => {
+                // In a real scenario, you would send this data to your affiliate network
+                alert(`Thank you for your application! You are applying for $${selectedAmount}. You will be redirected to our secure lender network.`);
+                
+                // Redirect to your affiliate offer
+                // window.location.href = 'YOUR_AFFILIATE_LINK_HERE';
+                
+                closeModal();
+            }, 2000);
+        });
+
+        // Add event listeners to CTA buttons
+        document.getElementById('cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            redirectToOffer();
+        });
+        
+        document.getElementById('bottom-cta').addEventListener('click', function(e) {
+            e.preventDefault();
+            redirectToOffer();
+        });
+
+        // Close modal button
+        document.querySelector('.close-modal').addEventListener('click', closeModal);
+
+        // Enhanced Scroll Animations
+        function checkScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if(position < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+            
+            // Scroll to top button visibility
+            const scrollTopBtn = document.querySelector('.scroll-to-top');
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+            
+            // Header scroll effect
+            const header = document.querySelector('header');
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+
+        // Scroll to top function
+        document.querySelector('.scroll-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Set initial state for fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        });
+
+        // Start the countdown timer when page loads
+        window.addEventListener('load', function() {
+            startCountdown();
+            updateApplicantsCounter();
+            checkScroll();
+        });
+
+        window.addEventListener('scroll', checkScroll);
+    </script>
+</body>
+</html>
